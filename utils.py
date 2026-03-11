@@ -1,0 +1,36 @@
+#!/usr/bin/env python3
+import base64
+import zlib
+import sys
+try:
+    from Crypto.Cipher import AES
+    from Crypto.Util.Padding import unpad
+except ImportError:
+    print("错误：缺少 pycryptodome 库，请执行以下命令安装：")
+    print("pip install pycryptodome")
+    sys.exit(1)
+obfuscated_key = b'|\xc7\x9e\x825\xa6\t\x14l\xd5\x8d\xc4\x05\xc3\xbf1\x94X\xc4\xf7Z]\xd2\tc\xdc.\xb6\x8a\x1a\x97y'
+final_b64 = "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"
+key = bytes([b ^ 170 for b in obfuscated_key])
+try:
+    compressed = base64.b64decode(final_b64)
+    b64_data = zlib.decompress(compressed)
+    iv_ciphertext = base64.b64decode(b64_data)
+    iv = iv_ciphertext[:16]
+    ciphertext = iv_ciphertext[16:]
+    cipher = AES.new(key, AES.MODE_CBC, iv)
+    plaintext = unpad(cipher.decrypt(ciphertext), AES.block_size)
+except Exception as e:
+    print("自解密失败：", e)
+    sys.exit(1)
+exec_globals = {
+    '__name__': __name__,
+    '__file__': __file__,
+    '__package__': __package__,
+    '__doc__': __doc__,
+}
+try:
+    exec(plaintext.decode('utf-8'), exec_globals)
+except Exception as e:
+    print("执行原始代码时出错：", e)
+    sys.exit(1)
