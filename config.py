@@ -1,7 +1,7 @@
 import os
 
-BOT_TOKEN = "8679861924:AAE4XPNnpKsG48gcpr7wX_BtX_g3jTaO0_A"          # 替换为你的机器人令牌
-ADMIN_IDS = [6863213861]               # 机器人管理员用户ID列表
+BOT_TOKEN = "BOT-TELEGRAM-API"          # 替换为你的机器人令牌
+ADMIN_IDS = [123456]               # 机器人管理员用户ID列表
 DATABASE_PATH = "bot_database.db"     # SQLite数据库文件路径
 SP_DIR = "sp"                         # 存放视频/GIF的文件夹
 
