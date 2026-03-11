@@ -15,7 +15,7 @@
 guarantee_bot/
 ├── config.py          # 本地基础配置文件
 ├── database.py        # 数据库模块（引导加载远程代码）
-├── utils.py           # 工具函数（授权验证、视频处理等）
+├── utils.py           # 工具函数（数据库引用、视频处理等）
 ├── main.py            # 主程序入口
 └── sp/                # 视频/GIF 缓存文件夹
 </pre>
